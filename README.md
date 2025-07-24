@@ -1,1 +1,1 @@
-'"><iframe src="https://github.com">
+<img src="https://github.com">

@@ -1,1 +1,1 @@
-<img src='https://attcontractorlmsprod.blob.core.windows.net/attachments/npwt/e2af1830-728d-4456-b54f-6eaa4aaba624.svg'>
+<img src='https://attcontractorlmsprod.blob.core.windows.net/attachments/npwt/03bd7147-057e-48d9-973d-921d8543973d.svg'>

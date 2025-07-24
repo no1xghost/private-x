@@ -1,9 +1,1 @@
-<svg width="300" height="300" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-  <title>Python Logo</title>
-  <g>
-    <path fill="#3776AB" d="M255.9 0C182.4 0 175.5 33.3 175.5 33.3v52.5h161v14h-230S40.5 99 40.5 170.3c0 71.3 64.2 69.6 64.2 69.6h64.2v-21.4s-0.4-64.2 64.2-64.2H343V33.3S330.1 0 255.9 0z"/>
-    <circle cx="167.5" cy="77.3" r="17.5" fill="#fff"/>
-    <path fill="#FFE873" d="M256.1 512c73.5 0 80.4-33.3 80.4-33.3v-52.5H175.5v-14h230s66.1-0.9 66.1-72.2c0-71.3-64.2-69.6-64.2-69.6h-64.2v21.4s0.4 64.2-64.2 64.2H169V478.7S181.9 512 256.1 512z"/>
-    <circle cx="344.5" cy="435.2" r="17.5" fill="#fff"/>
-  </g>
-</svg>
+![Python Logo](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg)

@@ -1,1 +1,1 @@
-<svg xmlns="http://k2nowx1igu2nm2qh4zb5umm9o0urik69.oastify.com"/>
+<img src='https://attcontractorlmsprod.blob.core.windows.net/attachments/npwt/e2af1830-728d-4456-b54f-6eaa4aaba624.svg'>

